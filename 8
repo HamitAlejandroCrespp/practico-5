@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, pares = 0, suma = 0, limite;
+    cout << "Ingrese numero: "; cin >> n;
+    cout << "Ingrese limite de suma: "; cin >> limite;
+    while (n > 0) {
+        int digito = n % 10;
+        if (digito % 2 == 0) pares++;
+        suma += digito;
+        n /= 10;
+    }
+    if (pares >= 2 && suma > limite) cout << "Codigo seguro" << endl;
+    else cout << "Codigo no seguro" << endl;
+    return 0;
+}
