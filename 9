@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, cantidad = 0, anterior = -1;
+    bool valido = true;
+    cout << "Ingrese PIN: "; cin >> n;
+    while (n > 0) {
+        int digito = n % 10;
+        if (digito == anterior) valido = false; // Hay repetido consecutivo
+        anterior = digito;
+        cantidad++;
+        n /= 10;
+    }
+    if (cantidad != 4) valido = false; // No tiene exactamente 4 digitos
+    
+    if (valido) cout << "PIN valido" << endl;
+    else cout << "PIN invalido" << endl;
+    return 0;
+}
