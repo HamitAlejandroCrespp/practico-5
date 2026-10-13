@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, pares = 0, digito;
+    cout << "Ingrese numero: "; cin >> n;
+    while (n > 0) {
+        digito = n % 10;
+        if (digito % 2 == 0) pares++;
+        n /= 10;
+    }
+    cout << "Digitos pares: " << pares << endl;
+    return 0;
+}
