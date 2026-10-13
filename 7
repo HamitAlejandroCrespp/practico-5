@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, total = 0, masDe5 = 0, cantidad = 0;
+    cout << "Ingrese numero: "; cin >> n;
+    while (n > 0) {
+        int digito = n % 10;
+        total += digito;
+        if (digito > 5) masDe5++;
+        cantidad++;
+        n /= 10;
+    }
+    cout << "Total horas: " << total << endl;
+    cout << "Apps > 5h: " << masDe5 << endl;
+    cout << "Promedio: " << (float)total/cantidad << endl;
+    return 0;
+}
